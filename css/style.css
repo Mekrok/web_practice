@@ -16,7 +16,7 @@ font-family: 'ProximaNova-Regular', sans-serif;
     margin: 0;
 }
 
-h1, h2, h3, a {
+h1, h2, h3, h4, a {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -24,6 +24,7 @@ body {
     font-family: 'Roboto Slab', serif;
     font-size: 16px;
     color: var(--gray);
+    overflow-x: hidden;
 }
 
 .container {
@@ -238,7 +239,115 @@ body {
     transform: translate(-150%, -45%);
 }
 
+/* Latest Project
+---------------------------------*/
 
+.block--project {
+    position: relative;
+}
+
+.project {
+    width: 53%;
+    z-index: 2;
+}
+
+.project-title {
+    font-size: 1.125rem;
+    color: var(--black);
+}
+
+.project-title--main {
+    text-transform: uppercase;
+}
+
+.project-sup  {
+    margin-top: 15px;
+}
+
+.project-sub {
+    margin-bottom: 20px;
+}
+
+.project-sup, .project-sub {
+    line-height: 1.5;
+}
+
+.project-list {
+    margin-top: 15px;
+}
+
+.project-list__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.project-list__img {
+    margin-right: 15px;
+}
+
+.project-link {
+    font-weight: bold;
+    color: var(--green);
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.project-link:after {
+    content: "";
+    width: 15px;
+    height: 12px;
+    background: url(../img/latest_project/strelka.svg) no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+    transition: transform .3s ease;
+}
+
+.project-link:hover:after {
+    transform: translate(150%, -50%);
+}
+
+.ipad {
+    position: absolute;
+    top: 255px;
+    right: -480px;
+    z-index: -1;
+}
+
+/* Culture
+---------------------------------*/
+
+.block--culture {
+    background: #f9f9f9;
+    position: relative;
+}
+
+.feature__title--culture {
+    margin-top: 20px;
+}
+
+.culture-lines {
+    display: flex;
+}
+
+.culture-line {
+    display: block;
+    width: 170px;
+    height: 2px;
+    position: absolute;
+    top: 313px;
+    background: var(--gray);
+}
+
+.culture-line--left {
+    margin-left: 222px;
+}
+
+.culture-line--right {
+    margin-left: 550px;
+}
 
 
 
