@@ -27,6 +27,10 @@ body {
     overflow-x: hidden;
 }
 
+ul {
+    list-style: none;
+}
+
 .container {
     width: 940px;
     margin: 0 auto;
@@ -219,7 +223,6 @@ body {
 
 .relax-right__list {
     margin-left: 50px;
-    list-style: none;
 }
 
 .relax-list__li {
@@ -347,6 +350,113 @@ body {
 
 .culture-line--right {
     margin-left: 550px;
+}
+
+
+/* Clients
+---------------------------------*/
+
+.client {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.client:last-child {
+    margin-bottom: 0;
+}
+
+.client--reverse {
+    flex-direction: row-reverse;
+}
+
+.client__avatar {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: #f9f9f9;
+}
+
+.client__comment {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 640px; 
+}
+
+.client__comment--first {
+    background: url(../img/clients/comment.png) no-repeat center left 0;
+    margin-left: 25px;
+    padding: 30px 40px 30px 60px;
+}
+
+.client__comment--second {
+    background: url(../img/clients/comment2.png) no-repeat center right 0;
+    margin-right: 25px;
+    padding: 30px 60px 30px 40px;
+}
+
+.comment__text {
+    margin-bottom: 20px;
+    font-size: 1.375rem;
+    line-height: 1.5;
+}
+
+.comment__author {
+    font-size: 1.125rem;
+    color: var(--green);
+    text-align: center;
+}
+
+/* Clients
+---------------------------------*/
+
+.contacts-block {
+    background: var(--green);
+    padding: 70px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contacts__title {
+    margin-bottom: 33px;
+    font-size: 2.3rem;
+    color: #fff;
+}
+
+.contacts__link {
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+    padding: 15px 0;
+    border: solid 3px #fff;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .1s color linear, .2s background ease;
+}
+
+.contacts__link:hover {
+    background: #fff;
+    color: var(--green);
+}
+
+
+/* Partners
+---------------------------------*/
+
+.partners-block {
+    padding: 60px 0;
+}
+
+.partners {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 775px;
 }
 
 
