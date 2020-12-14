@@ -16,6 +16,10 @@ font-family: 'ProximaNova-Regular', sans-serif;
     margin: 0;
 }
 
+*:focus {
+    outline: none;
+}
+
 h1, h2, h3, h4, a {
     font-family: 'Montserrat', sans-serif;
 }
@@ -103,7 +107,7 @@ ul {
 }
 
 .header-intro__title {
-    font-size: 60px;
+    font-size: 3.75rem;
     line-height: 1.1;
     color: #fff;
     text-transform: uppercase;
@@ -114,6 +118,40 @@ ul {
     margin: 35px 0 50px;
     font-size: 1.25rem;
     color: #cccccc;
+}
+
+/* Burger ---------- */
+
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.burger__item {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background: var(--green);
+}
+
+.burger__item:before, .burger__item:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--green);
+}
+
+.burger__item:before {
+    top: -8px;
+}
+
+.burger__item:after{
+    bottom: -8px;
 }
 
 /* Block 
@@ -304,9 +342,13 @@ ul {
 }
 
 .ipad {
+    display: block;
+    background: url(../img/latest_project/ipad.png) no-repeat;
+    width: 650px;
+    height: 600px;
     position: absolute;
     top: 255px;
-    right: -480px;
+    right: 0;
     z-index: -1;
 }
 
@@ -366,6 +408,7 @@ ul {
     height: 220px;
     border-radius: 50%;
     background: #f9f9f9;
+    flex-shrink: 0;
 }
 
 .client__comment {
@@ -447,7 +490,7 @@ ul {
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    width: 775px;
+    max-width: 775px;
 }
 
 /* Footer
@@ -580,3 +623,288 @@ ul {
 .copyright__li--google:hover {
     background: #da3213;
 }
+
+
+/* Responsive
+---------------------------------*/
+
+/* 993 - 1200 */
+@media screen and (max-width: 1200px) {     
+    .ipad {
+        width: 530px;
+    }
+}
+
+/* 910 - 992 */
+@media screen and (max-width: 992px) {
+    
+    :root {
+        font-size: 14px;
+    }
+    
+    .container {
+        width: 720px;
+    }
+    
+    .container--grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .block {
+        padding: 85px 0;
+    }
+    
+    .block__subtitle {
+        margin-bottom: 70px;
+    }
+    
+    .contacts-block {
+        padding: 50px 0;
+    }
+    
+    .contacts__title {
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+    
+    .culture-line, .ipad {
+        display: none;
+    }
+    
+    .relax-right {
+        padding: 90px 0 90px 90px;
+    }
+    
+    .client__avatar {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .project {
+        width: 100%;
+    }
+    
+    .partners {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+
+/* 769 - 909 */
+@media screen and (max-width: 909px) {
+    
+    .relax-right {
+        padding: 65px 0 65px 65px;
+    }
+    
+    .client__avatar {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* 577 - 768 */
+@media screen and (max-width: 768px) {
+    
+    :root {
+        font-size: 12px;
+    }
+    
+    .container {
+        width: 540px;
+    }
+    
+    .container--grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header-intro, .block {
+        padding: 60px 0;
+    }
+    
+    .header-nav {
+        margin: 25px 0;
+    }
+    
+    .relax-left {
+        display: none;
+    }
+    
+    /* Burger ----- */
+    .burger {
+        display: block;
+    }
+    
+    header {
+        position: relative;
+    }
+    
+    .nav {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 13%;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 20px 10px 0;
+        text-align: right;
+        background: rgba(250, 250, 250, 0.76);
+    }
+    
+    .nav.show {
+        display: flex;
+    }  
+    
+    .nav__link {
+        color: var(--black);
+        font-size: 1.2rem;
+    }
+    /* --- */
+
+    .block__subtitle {
+        margin-bottom: 50px;
+    }
+    
+    .block__features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature__title {
+        margin-top: 15px;
+    }
+    
+    .feature__text {
+        font-size: 1.4rem;
+    }
+    
+    .feature__item {
+        width: 100%;
+    }
+    
+    .feature__item + .feature__item {
+        margin-top: 20px;
+    }
+    
+    .relax-block {
+        height: auto;
+    }
+    
+    .relax-right {
+        flex-basis: 100%;
+        padding: 60px 60px;
+    }
+    
+    .client__avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .comment__text {
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+    }
+    
+    .contacts-block {
+        padding: 40px 0;
+    }
+    
+    .contacts__title {
+        font-size: 1.8rem;
+    }
+    
+    .partners-block {
+        padding: 30px 0 35px;
+    }
+    
+    .partners__item {
+        margin-top: 15px;
+    }
+    
+    .info-column + .info-column {
+        margin-top: 30px;
+    }
+    
+    .info-list {
+        padding-top: 15px;
+    }
+    
+    .button {
+        font-size: 1rem;
+    }
+}
+
+/* 431 - 576 */
+@media screen and (max-width: 576px) {
+    
+    :root {
+        font-size: 11px;
+    }
+    
+    .container {
+        width: 90%;
+    }
+    
+    .header-intro, .block, .info {
+        padding: 40px 0;
+    }
+    
+    .block__subtitle {
+        margin-bottom: 30px;
+    }
+        
+    .relax-right {
+        padding: 40px 20px;
+    }
+    
+    .relax-right__text {
+        margin-top: 20px;
+    }
+    
+    .client {
+        margin-bottom: 20px;
+    }
+
+    .client__avatar {
+        display: none;
+    }
+    
+    .feature__text {
+        font-size: 1.4rem;
+    }
+    
+    .partners-block, .copyright {
+        padding: 20px 0;
+    }
+        
+    .copyright__inner {
+        flex-direction: column;
+    }
+    
+    .copyright__text {
+        margin: 0 0 15px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    
+    .project {
+        text-align: center;
+    }
+    
+    .project-title {
+        margin: 10px 0;
+    }
+    
+    .project-list__item {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    
+    .project-list__img {
+        margin: 0;
+    }
+    
+}
+
